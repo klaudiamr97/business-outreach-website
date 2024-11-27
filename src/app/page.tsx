@@ -1,101 +1,89 @@
-import Image from "next/image";
+import BrandShowcase from "@/components/BrandShowcase";
+import CaseStudies from "@/components/CaseStudies";
+import CallToAction from "@/components/CTA";
+import Hero from "@/components/Hero";
+import IntroBlock from "@/components/IntroBlock";
+import OpportunitiesBlock from "@/components/OpportunitiesBlock";
+import Restaurant from "@/assets/veganic_home-1_small.webp"
+import FoodImg from "@/assets/food.webp"
+import UKR from "@/assets/ukr.jpg"
+import McMiller from "@/assets/McMiller_ItsBananas-550x350.jpeg"
+import PJC from "@/assets/PJC.jpeg"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const brandShowcaseAchievements = {
+    title: "What We Love About Veganic",
+    achievements:[
+      { label: "Commitment to Sustainability:" ,
+        description:"Your focus on organic, locally sourced ingredients is something we deeply admire, setting a new standard in the plant-based dining industry."},
+        { label: "Innovative Menu:" ,
+          description:"From your mouthwatering vegan tacos to decadent desserts, every dish is a celebration of flavor and ethical dining."},
+          { label: "Connection to Community:" ,
+            description:"Your dedication to supporting local farmers and reducing your environmental footprint shows how much you care about both people and the planet."},
+     
+    ]
+  }
+  const opportunities = {
+    title: "Opportunities to Build on Your Success",
+    opportunities:[
+      { label: "Elevate Your Visibility:" ,
+        description:"Implement a customized SEO strategy to attract eco-conscious diners and plant-based food enthusiasts, bringing more visibility to your mission and menu."},
+        { label: "Expand Your Reach:" ,
+          description:"Launch targeted PPC campaigns to connect with local customers who value sustainable dining and crave innovative vegan cuisine."},
+          { label: "Enhance Guest Experience:" ,
+            description:"Optimize your website to create a seamless journey from discovery to booking, ensuring visitors are excited to dine with you or order online."},
+     
+    ]
+  }
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  const caseStudiesData = {
+    heading:"Our Work That Aligns with Your Vision",
+    CaseStudies:[
+      {
+        image: UKR,
+        title:"UK Radiators" ,
+        description: "We implemented an integrated content strategy for UK Radiators, which tripled their organic traffic. Our tailored approach focused on SEO optimization and engaging, conversion-driven content.",
+        link: "https://www.digivate.com/work/uk-radiators-cro/"
+      },
+      {
+        image: McMiller,
+        title:"McMiller Games" ,
+        description: "For McMiller Games, we designed data-backed advertising personas, leading to a 151% revenue increase and a 400% ROI. This campaign effectively connected their brand to their target audience.",
+        link: "https://www.digivate.com/work/mcmiller/"
+      },
+      {
+        image: PJC,
+        title:"Private Jet Charter" ,
+        description: "Our bespoke SEO strategy for Private Jet Charter increased their conversions by 77.82%. The focus was on driving targeted traffic and delivering a luxury-focused digital experience.",
+        link: "https://www.digivate.com/work/private-jet-charter/"
+      },
+    ]
+  }
+  return (
+    <div className="min-h-screen bg-gray-100 w-full flex flex-col space-y-8 overflow-x-hidden">
+      <Hero title="Hello Veganic!" 
+      description="We’ve been inspired by your incredible work and wanted to share something special with you." 
+      imgSrc={Restaurant}/>
+      <IntroBlock 
+      description="Your commitment to sustainability, plant-based living, and serving delicious, organic food truly caught our eye. The impact you’re making in the culinary world is not only inspiring but essential to a better, greener future. We believe in your mission, and we’d love to help amplify your reach and success even further. Together, we can share your story with a broader audience and drive even more food lovers to your doors."
+      imgSrc={FoodImg} />
+      <BrandShowcase
+      title={brandShowcaseAchievements.title}
+      achievements={brandShowcaseAchievements.achievements}
+      />
+      <OpportunitiesBlock
+      title={opportunities.title}
+      opportunities={opportunities.opportunities}
+      />
+      <CaseStudies 
+      heading={caseStudiesData.heading}
+      caseStudies={caseStudiesData.CaseStudies}
+      />
+      <CallToAction 
+      heading="We’d Love to Collaborate"
+      description="If you’re ready to take your impact to the next level, let’s connect! We’d be thrilled to discuss how we can help Veganic shine even brighter and reach more guests who share your passion for sustainable, plant-based dining."
+      buttonLink="#"
+      />
     </div>
   );
 }
