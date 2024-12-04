@@ -1,23 +1,18 @@
 import Image from "next/image";
-import Restaurant from "@/assets/veganic_home-1_small.webp";
 import DigivateLogo from "@/assets/white-logo.svg";
 import VeganicLogo from "@/assets/logo_veganic_restaurant_jasne.webp";
+import { HeroData } from "config";
 
-const heroData = {
-  title: "Hello Veganic!",
-  description:
-    "We’ve been inspired by your incredible work and wanted to share something special with you.",
-  imgSrc: Restaurant,
-};
 
 
 export default function Hero() {
+  const {imgSrc,title, description} = HeroData;
   return (
     <div className="relative flex flex-col items-center justify-center h-screen">
-      {heroData.imgSrc && (
+      {imgSrc && (
         <div className="relative w-full h-full">
           <Image
-            src={heroData.imgSrc}
+            src={imgSrc}
             alt="hero-image"
             objectFit="cover"
             layout="fill"
@@ -46,11 +41,11 @@ export default function Hero() {
         />
         <h1 className="text-h1 py-4 text-white">
           <span className="text-veganic-gold">
-            {heroData.title.split(" ")[0]}
+            {title.split(" ")[0]}
           </span>{" "}
-          {heroData.title.split(" ").slice(1).join(" ")}
+          {title.split(" ").slice(1).join(" ")}
         </h1>
-        <p className="text-h5 max-w-3xl text-white">{heroData.description}</p>
+        <p className="text-h5 max-w-3xl text-white">{description}</p>
       </div>
     </div>
   );
