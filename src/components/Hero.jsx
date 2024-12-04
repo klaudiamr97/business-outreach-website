@@ -3,7 +3,15 @@ import Restaurant from "@/assets/veganic_home-1_small.webp";
 import DigivateLogo from "@/assets/white-logo.svg";
 import VeganicLogo from "@/assets/logo_veganic_restaurant_jasne.webp";
 
-function Hero() {
+const heroData = {
+  title: "Hello Veganic!",
+  description:
+    "We’ve been inspired by your incredible work and wanted to share something special with you.",
+  imgSrc: Restaurant,
+};
+
+
+export default function Hero() {
   return (
     <div className="relative flex flex-col items-center justify-center h-screen">
       {heroData.imgSrc && (
@@ -48,12 +56,6 @@ function Hero() {
   );
 }
 
-// Content for prompts
-const heroData = {
-  title: "Hello Veganic!",
-  description:
-    "We’ve been inspired by your incredible work and wanted to share something special with you.",
-  imgSrc: Restaurant,
-};
 
-export default Hero;
+
+

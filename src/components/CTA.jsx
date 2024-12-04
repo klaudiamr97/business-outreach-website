@@ -1,4 +1,11 @@
-function CallToAction() {
+const callToActionData = {
+  heading: "We’d Love to Collaborate",
+  description:
+    "If you’re ready to take your impact to the next level, let’s connect! We’d be thrilled to discuss how we can help Veganic shine even brighter and reach more guests who share your passion for sustainable, plant-based dining.",
+  buttonLink: "#",
+};
+
+export default function CallToAction() {
     return (
       <div className="flex flex-col mx-6 my-10 md:my-16 lg:my-24 items-center text-center">
         <h2 className="text-h2 mb-2 md:mb-4">{callToActionData.heading}</h2>
@@ -16,12 +23,7 @@ function CallToAction() {
     );
   }
   
-  const callToActionData = {
-    heading: "We’d Love to Collaborate",
-    description:
-      "If you’re ready to take your impact to the next level, let’s connect! We’d be thrilled to discuss how we can help Veganic shine even brighter and reach more guests who share your passion for sustainable, plant-based dining.",
-    buttonLink: "#",
-  };
   
-  export default CallToAction;
+  
+ 
   
