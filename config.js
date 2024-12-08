@@ -46,35 +46,11 @@ export const OpportunitiesData = {
 
 // Case Studies
 
-import UKR from "@/assets/ukr.jpg";
-import McMiller from "@/assets/McMiller_ItsBananas-550x350.jpeg";
-import PJC from "@/assets/PJC.jpeg";
+
 
 export const CaseStudiesData = {
   heading: "Our Work That Aligns with Your Vision",
-  CaseStudies: [
-    {
-      image: UKR,
-      title: "UK Radiators",
-      description:
-        "We implemented an integrated content strategy for UK Radiators, which tripled their organic traffic. Our tailored approach focused on SEO optimization and engaging, conversion-driven content.",
-      link: "https://www.digivate.com/work/uk-radiators-cro/",
-    },
-    {
-      image: McMiller,
-      title: "McMiller Games",
-      description:
-        "For McMiller Games, we designed data-backed advertising personas, leading to a 151% revenue increase and a 400% ROI. This campaign effectively connected their brand to their target audience.",
-      link: "https://www.digivate.com/work/mcmiller/",
-    },
-    {
-      image: PJC,
-      title: "Private Jet Charter",
-      description:
-        "Our bespoke SEO strategy for Private Jet Charter increased their conversions by 77.82%. The focus was on driving targeted traffic and delivering a luxury-focused digital experience.",
-      link: "https://www.digivate.com/work/private-jet-charter/",
-    },
-  ],
+  
 };
 
 // Call To Action
