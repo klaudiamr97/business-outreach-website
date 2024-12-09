@@ -23,7 +23,7 @@
     "src/components/CaseStudies.jsx",
     "src/components/CTA.jsx",
     "src/components/Hero.jsx",
-    "src/components/IntroBlock.jsx",
+    "src/components/ImageText.jsx",
     "src/components/OpportunitiesBlock.jsx",
     "src/components/Footer.jsx",
     "src/app/page.jsx",
