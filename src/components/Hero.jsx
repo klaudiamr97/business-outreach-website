@@ -1,18 +1,13 @@
 import Image from "next/image";
-import DigivateLogo from "@/assets/white-logo.svg";
-import VeganicLogo from "@/assets/logo_veganic_restaurant_jasne.webp";
-import { HeroData } from "config";
 
-
-
-export default function Hero() {
-  const {imgSrc,title, description} = HeroData;
+export default function Hero(props) {
+  const {heroImg,companyLogo, digivateLogo, title, description} = props;
   return (
     <div className="relative flex flex-col items-center justify-center h-screen">
-      {imgSrc && (
+      {heroImg && (
         <div className="relative w-full h-full">
           <Image
-            src={imgSrc}
+            src={heroImg}
             alt="hero-image"
             objectFit="cover"
             layout="fill"
@@ -23,7 +18,7 @@ export default function Hero() {
       )}
       <div className="absolute top-0 md:left-0 m-4 z-10">
         <Image
-          src={VeganicLogo}
+          src={companyLogo}
           alt="Veganic Logo"
           width={150}
           height={50}
@@ -33,7 +28,7 @@ export default function Hero() {
 
       <div className="absolute flex flex-col items-center text-center z-10 m-4">
         <Image
-          src={DigivateLogo}
+          src={digivateLogo}
           alt="Digivate Logo"
           width={100}
           height={50}

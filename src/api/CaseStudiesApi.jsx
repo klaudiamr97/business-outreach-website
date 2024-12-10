@@ -1,5 +1,5 @@
-export const fetchCaseStudies = async () => {
-    const res = await fetch('https://67560b6111ce847c992bd68c.mockapi.io/case-studies/casestudies');
+export const fetchApi = async (url) => {
+    const res = await fetch(url);
     const data = await res.json();
     return data;
   };

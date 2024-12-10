@@ -19,7 +19,7 @@
     "**/*.js",
     "**/*.jsx",
     ".next/types/**/*.js",
-    "src/components/BrandShowcase.jsx",
+    "src/components/ListBlock.jsx",
     "src/components/CaseStudies.jsx",
     "src/components/CTA.jsx",
     "src/components/Hero.jsx",

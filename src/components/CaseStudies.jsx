@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { fetchCaseStudies } from "@/api/CaseStudiesApi";
 
-  export default async function CaseStudies ({children}) {
-    const caseStudies = await fetchCaseStudies();
+  export default async function CaseStudies (props) {
+    const {caseStudies, title} = props
+    
   return (
     <div className="flex flex-col mx-8 mt-10 md:mx-10 md:mt-16 lg:mx-20 lg:mt-24">
       
         <div>
-          <h2 className="text-h2 mb-6 md:mb-4">{children}</h2>
+          <h2 className="text-h2 mb-6 md:mb-4">{title}</h2>
         </div>
       <div className="flex flex-col md:flex-row md:space-x-6">
-      {caseStudies.map((caseStudy, index) => (
+      {caseStudies?.map((caseStudy, index) => (
         <div key={index} className="flex flex-col mb-6 md:mb-0 md:basis-1/3">
           <div className="relative w-full h-48 md:h-36 lg:h-64 mt-8">
             <Image
