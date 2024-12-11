@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-  export default async function CaseStudies (props) {
+  export default function CaseStudies (props) {
     const {caseStudies, title} = props
     
   return (
