@@ -8,14 +8,12 @@ import FoodImg from "@/assets/food.webp";
 import Restaurant from "@/assets/veganic_home-1_small.webp";
 import DigivateLogo from "@/assets/white-logo.svg";
 import VeganicLogo from "@/assets/logo_veganic_restaurant_jasne.webp";
-import { useFetchData } from "@/api/FetchApi";
+
 
 
 
 export default function Home() {
-  const {data, loading, error} = useFetchData('https://67560b6111ce847c992bd68c.mockapi.io/case-studies/casestudies');
-  if(loading) return <p>Loading...</p>
-  if (error) return <p>Error:{error}</p>
+  
   return (
     <div className="min-h-screen bg-gray-100 w-full flex flex-col space-y-8 overflow-x-hidden">
       <Hero title="Hello Veganic!" description="We’ve been inspired by your incredible work and wanted to share something special with you." heroImg={Restaurant} companyLogo={VeganicLogo} digivateLogo={DigivateLogo} />
