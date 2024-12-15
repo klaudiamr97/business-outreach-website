@@ -9,9 +9,9 @@ export default function Hero(props) {
           <Image
             src={heroImg}
             alt="hero-image"
-            objectFit="cover"
-            layout="fill"
-            objectPosition="center"
+            fill
+            style ={{objectFit:"cover", objectPosition:"center"}}
+            priority
           />
           <div className="absolute inset-0 bg-gray-900 opacity-50 z-0"></div>
         </div>
@@ -22,7 +22,8 @@ export default function Hero(props) {
           alt="Veganic Logo"
           width={150}
           height={50}
-          objectPosition="center"
+          style ={{objectPosition:"center"}}
+          priority
         />
       </div>
 
@@ -32,7 +33,7 @@ export default function Hero(props) {
           alt="Digivate Logo"
           width={100}
           height={50}
-          objectPosition="center"
+          style ={{objectPosition:"center"}}
         />
         <h1 className="text-h1 py-4 text-white">
           <span className="text-veganic-gold">

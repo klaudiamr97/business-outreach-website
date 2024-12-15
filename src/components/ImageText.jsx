@@ -10,8 +10,7 @@ export default function ImageText(props) {
             width={500}
             height={400}
             alt="Intro image"
-            layout="responsive"
-            objectFit="cover"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
         </div>
       <div className="md:basis-1/2 mt-8 md:mt-0 text-p">

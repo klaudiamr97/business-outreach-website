@@ -22,6 +22,17 @@ export function useFetchData(url){
       setLoading(false)
     }
   })
+  // .then((data)=>{
+  //   if (isMounted){
+  //     setData(data)
+  //     setLoading(true);
+  //     setTimeout(()=>{
+  //       if (isMounted){
+  //         setLoading(false);
+  //       }
+  //     }, 6000)
+  //   }
+  // })
   .catch((err)=>{
     if(isMounted){
       setError(err.message)

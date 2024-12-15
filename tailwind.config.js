@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        fadeInOut: 'fadeInOut 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeInOut: {
+          '0%': { opacity: '0.1' },
+          '50%': { opacity: '1' },
+          '60%': {opacity: '1'},
+          '100%': { opacity: '0.1' },
+        },
+      },
       height: {
         '128': '32rem',
       },
@@ -22,7 +33,8 @@ module.exports = {
         'button': '#ffffff',
         'button-hover': "#f5394e",
         'hero-color': '#ffff',
-        'veganic-gold': "#c59d5f"
+        'veganic-gold': "#c59d5f",
+        'digivate':"#ff4449"
       },
       fontSize: {
         h1: [

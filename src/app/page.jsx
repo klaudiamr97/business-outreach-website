@@ -50,7 +50,7 @@ export default function Home() {
         description:
           "Optimize your website to create a seamless journey from discovery to booking, ensuring visitors are excited to dine with you or order online.",
       },]} />
-      <CaseStudies title="Our Work That Aligns with Your Vision" caseStudies={data}/>
+      <CaseStudies title="Our Work That Aligns with Your Vision" />
       <CallToAction heading="We’d Love to Collaborate" description="If you’re ready to take your impact to the next level, let’s connect! We’d be thrilled to discuss how we can help Veganic shine even brighter and reach more guests who share your passion for sustainable, plant-based dining." buttonText="Book a call" buttonLink="#" />
     </div>
   );
