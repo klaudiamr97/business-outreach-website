@@ -1,25 +1,15 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function ImageText(props) {
-  const {imgSrc, children} = props;
+  const { imgSrc, children } = props;
   return (
-    <div className="flex flex-col md:flex-row mx-8 mt-10 md:mx-10 md:mt-16 lg:mx-20 lg:mt-24">
-      <div className="relative w-full md:basis-1/2 md:mr-6 h-auto">
-          <Image
-            src={imgSrc}
-            width={500}
-            height={400}
-            alt="Intro image"
-            style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          />
-        </div>
-      <div className="md:basis-1/2 mt-8 md:mt-0 text-p">
-         {children}
+    <div className="flex flex-col md:flex-row mx-8 md:mx-10 lg:mx-20 mt-10 md:mt-16 lg:mt-24 space-y-8 md:space-y-0 md:space-x-12">
+      <div className="md:basis-1/2 flex md:items-center">
+        <div>{children}</div>
+      </div>
+      <div className="relative w-full md:basis-1/2 flex-grow">
+        <Image src={imgSrc} alt="Intro image" style={{ width: 'full', height: 'auto', objectFit: 'cover' }} />
       </div>
     </div>
   );
 }
-
-
-
-
