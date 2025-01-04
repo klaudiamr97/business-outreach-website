@@ -12,7 +12,7 @@ export default function CaseStudies(props) {
   ) : (
     <div className="flex flex-col mx-8 mt-10 md:mx-10 md:mt-16 lg:mx-20 lg:mt-24">
       <div>
-        <h2 className="text-h2 mb-6 md:mb-4">{title}</h2>
+        <h2 className="text-h2 items-center text-center mb-6 md:mb-4">{title}</h2>
       </div>
       <div className="flex flex-col md:flex-row md:space-x-6">
         {data?.map((caseStudy, index) => (

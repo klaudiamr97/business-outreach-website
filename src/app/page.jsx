@@ -8,6 +8,10 @@ import ImagePack from '@/assets/Intro_image.png';
 import Restaurant from '@/assets/veganic_home-1_small.webp';
 import DigivateLogo from '@/assets/white-logo.svg';
 import VeganicLogo from '@/assets/logo_veganic_restaurant_jasne.webp';
+import ListArticle from '@/components/ListArticle';
+import Menu from '@/assets/menu.jpg';
+import Sustainability from '@/assets/sustainability.jpg';
+import Customers from '@/assets/galeria_wnetrze.jpg'
 
 export default function Home() {
   return (
@@ -29,27 +33,32 @@ export default function Home() {
             Together, we can share your story with a broader audience and drive even more food lovers to your doors.
           </p>
         </ImageText>
-
-        <ListBlock
-          title="What We Love About Veganic"
-          listElements={[
+        <ListArticle
+          articles={[
             {
-              label: 'Commitment to Sustainability:',
-              description:
+              title: 'Commitment to Sustainability',
+              snippet:
                 'Your focus on organic, locally sourced ingredients is something we deeply admire, setting a new standard in the plant-based dining industry.',
+              imageUrl: Sustainability,
+              imageAltText: 'Veganic Restaurant packed food',
             },
             {
-              label: 'Innovative Menu:',
-              description:
+              title: 'Innovative Menu',
+              snippet:
                 'From your mouthwatering vegan tacos to decadent desserts, every dish is a celebration of flavor and ethical dining.',
+              imageUrl: Menu,
+              imageAltText: "Veganic Restaurant's Menu",
             },
             {
-              label: 'Connection to Community:',
-              description:
+              title: 'Connection to Community',
+              snippet:
                 'Your dedication to supporting local farmers and reducing your environmental footprint shows how much you care about both people and the planet.',
+              imageUrl: Customers,
+              imageAltText: "Veganic Restaurant's Customers",
             },
           ]}
         />
+        
         <ListBlock
           title="Opportunities to Build on Your Success"
           listElements={[
