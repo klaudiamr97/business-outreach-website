@@ -9,9 +9,7 @@ import Restaurant from '@/assets/veganic_home-1_small.webp';
 import DigivateLogo from '@/assets/white-logo.svg';
 import VeganicLogo from '@/assets/logo_veganic_restaurant_jasne.webp';
 import ListArticle from '@/components/ListArticle';
-import Menu from '@/assets/menu.jpg';
-import Sustainability from '@/assets/sustainability.jpg';
-import Customers from '@/assets/galeria_wnetrze.jpg'
+import ImageGroup from '@/assets/ImageGroup.png';
 
 export default function Home() {
   return (
@@ -39,28 +37,24 @@ export default function Home() {
               title: 'Commitment to Sustainability',
               snippet:
                 'Your focus on organic, locally sourced ingredients is something we deeply admire, setting a new standard in the plant-based dining industry.',
-              imageUrl: Sustainability,
-              imageAltText: 'Veganic Restaurant packed food',
             },
             {
               title: 'Innovative Menu',
               snippet:
                 'From your mouthwatering vegan tacos to decadent desserts, every dish is a celebration of flavor and ethical dining.',
-              imageUrl: Menu,
-              imageAltText: "Veganic Restaurant's Menu",
             },
             {
               title: 'Connection to Community',
               snippet:
                 'Your dedication to supporting local farmers and reducing your environmental footprint shows how much you care about both people and the planet.',
-              imageUrl: Customers,
-              imageAltText: "Veganic Restaurant's Customers",
             },
           ]}
         />
         
         <ListBlock
           title="Opportunities to Build on Your Success"
+          imgSrc={ImageGroup}
+          imgAltText="Pictures of food"
           listElements={[
             {
               label: 'Elevate Your Visibility:',

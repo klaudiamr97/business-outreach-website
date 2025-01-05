@@ -35,6 +35,7 @@ module.exports = {
         'hero-color': '#ffff',
         'veganic-gold': '#c59d5f',
         digivate: '#ff4449',
+        midnightblue: '#001f38'
       },
       fontSize: {
         h1: [
