@@ -5,9 +5,9 @@ export default function ListBlock(props) {
   return (
     <div className="flex flex-col mx-8 mt-10 md:mx-10 md:mt-16 lg:mx-20 lg:mt-24">
       <div>
-        <h2 className="text-h2 items-center text-center text-veganic-gold mb-6 md:mb-4">{title}</h2>
+        <h2 className="text-h2 items-center text-center text-veganic-gold">{title}</h2>
       </div>
-      <div className="flex flex-col lg:flex-row mt-6 md:gap-8">
+      <div className="flex flex-col lg:flex-row mt-12 lg:mt-20 md:gap-8">
         <div className="relative w-full lg:w-1/2 md:pt-2 lg:pt-0 flex-shrink-0">
           <Image src={imgSrc} alt={imgAltText} style={{ width: 'full', height: 'auto', objectFit: 'cover' }} />
         </div>

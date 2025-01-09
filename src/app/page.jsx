@@ -13,7 +13,7 @@ import ImageGroup from '@/assets/ImageGroup.png';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col space-y-8 overflow-x-hidden">
+    <div className="min-h-screen flex flex-col space-y-8 ">
       <Hero
         title="Hello Veganic!"
         description="We’ve been inspired by your incredible work and wanted to share something special with you."
@@ -21,9 +21,9 @@ export default function Home() {
         companyLogo={VeganicLogo}
         digivateLogo={DigivateLogo}
       />
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 lg:px-16">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-16">
         <ImageText imgSrc={ImagePack}>
-          <h2 className="text-h2 text-veganic-gold mb-6">What We Love About Veganic</h2>
+          <h2 className="text-h2  text-veganic-gold mb-6">What We Love About Veganic</h2>
           <p className="text-p leading-relaxed mt-4 max-w-prose">
             Your commitment to sustainability, plant-based living, and serving delicious, organic food truly caught our
             eye. The impact you’re making in the culinary world is not only inspiring but essential to a better, greener
@@ -50,7 +50,7 @@ export default function Home() {
             },
           ]}
         />
-        
+
         <ListBlock
           title="Opportunities to Build on Your Success"
           imgSrc={ImageGroup}
