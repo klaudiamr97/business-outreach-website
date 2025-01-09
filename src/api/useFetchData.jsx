@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export function useFetchData(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retry, setRetry] = useState(0);
 
-  useEffect(() => {
-    let isMounted = true;
+  const fetchData = useCallback(() => {
+    setLoading(true);
+    setError(null);
 
     fetch(url)
       .then((response) => {
@@ -16,31 +18,16 @@ export function useFetchData(url) {
         return response.json();
       })
       .then((data) => {
-        if (isMounted) {
-          setData(data);
-          setLoading(false);
-        }
+        setData(data);
+        setLoading(false);
       })
-      // .then((data)=>{
-      //   if (isMounted){
-      //     setData(data)
-      //     setLoading(true);
-      //     setTimeout(()=>{
-      //       if (isMounted){
-      //         setLoading(false);
-      //       }
-      //     }, 6000)
-      //   }
-      // })
       .catch((err) => {
-        if (isMounted) {
-          setError(err.message);
-          setLoading(false);
-        }
+        setError(err.message);
+        setLoading(false);
       });
-    return () => {
-      isMounted = false;
-    };
   }, [url]);
-  return { data, loading, error };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData, retry]);
+  return { data, loading, error, retryFetch: () => setRetry((prev) => prev + 1) };
 }

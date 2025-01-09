@@ -5,10 +5,19 @@ import { ErrorMessage } from './ErrorMessage';
 export default function CaseStudies(props) {
   const { title } = props;
 
-  let { data, loading, error } = useFetchData('https://67560b6111ce847c992bd68c.mockapi.io/case-studies/Casestudies');
+  let { data, loading, error, retryFetch } = useFetchData('https://67560b6111ce847c992bd68c.mockapi.io/case-studies/Casestudies');
 
   return error ? (
-    <ErrorMessage>Oops! It looks like the case studies are missing.</ErrorMessage>
+    <ErrorMessage>
+      <p>Oops! It looks like the case studies are missing.</p>
+      <button
+        className="bg-button-bg text-button hover:bg-white border-2 hover:text-button-hover border-button-bg px-8 md:px-16 py-2 rounded-md my-4 transition ease-in-out"
+        onClick={retryFetch}
+      >
+        Try again
+      </button>
+    </ErrorMessage>
+    
   ) : (
     <div className="flex flex-col mx-8 mt-10 md:mx-10 md:mt-16 lg:mx-20 lg:mt-24">
       <div>
